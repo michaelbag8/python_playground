@@ -132,7 +132,8 @@ def point_summary(point):
         "y": y,
         "manhattan": abs(x) + abs(y),
     }
-    def deep_flatten(items):
+    
+def deep_flatten(items):
     result = []
 
     for item in items:
@@ -142,4 +143,50 @@ def point_summary(point):
             result.append(item)
 
     return result
+
+def calculate_inventory():
+    customers = 3
+    cereal_per_person = 2.5
+    milk_per_person = 1.25
+
+    total_cereal = 0
+    total_milk = 0
+
+    starting_cereal = 10.0
+    starting_milk = 15.0
+
+    total_cereal = cereal_per_person * customers
+    total_milk = milk_per_person * customers
+
+    remaining_cereal = starting_cereal - total_cereal
+    remaining_milk = starting_milk - total_milk
+
+    return remaining_cereal, remaining_milk
+
+def set_kettle_temp(self, selected_drink):
+    target_temp = 100
+
+    if selected_drink == "Green Tea":
+        target_temp = 80
+
+    return target_temp
+
+def bunk_assignment(service_number):
+    room = (service_number - 1) // 8 + 1
+    bunk = (service_number - 1) % 8 + 1
+    return f"Room {room}, Bunk {bunk}"
+
+def muster_record(name, service_number):
+    return (
+        f"RECRUIT: {name}\n"
+        f"SERVICE NUMBER: {service_number}\n"
+        f"QUARTERS: {bunk_assignment(service_number)}"
+    )
+
+def convert_number(value):
+    try:
+        number = float(value)
+        return number * 2
+    except ValueError:
+        return "Invalid number"
 
