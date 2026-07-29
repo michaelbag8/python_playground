@@ -1,3 +1,4 @@
+# Arena Drill Solutions 
 def unique_tags(tags):
     unique = []
 
@@ -123,3 +124,22 @@ def vote_eligibility(age, country):
         return "Eligible"
     else:
         return "Not eligible"
+
+def point_summary(point):
+    x, y = point
+    return {
+        "x": x,
+        "y": y,
+        "manhattan": abs(x) + abs(y),
+    }
+    def deep_flatten(items):
+    result = []
+
+    for item in items:
+        if isinstance(item, list):
+            result.extend(deep_flatten(item))
+        else:
+            result.append(item)
+
+    return result
+
