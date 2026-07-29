@@ -30,3 +30,13 @@ def top_scorer(scores):
             top_name = name
 
     return top_name
+
+def set_comparison(a, b):
+    set_a = set(a)
+    set_b = set(b)
+
+    return {
+        "both": sorted(set_a & set_b),
+        "only_a": sorted(set_a - set_b),
+        "only_b": sorted(set_b - set_a),
+    }
