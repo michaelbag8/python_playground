@@ -40,3 +40,31 @@ def set_comparison(a, b):
         "only_a": sorted(set_a - set_b),
         "only_b": sorted(set_b - set_a),
     }
+    
+    def exact_calculator(left, operator, right):
+    try:
+        left = float(left)
+        right = float(right)
+    except ValueError:
+        return "Invalid number"
+
+    if operator == "+":
+        result = left + right
+    elif operator == "-":
+        result = left - right
+    elif operator == "*":
+        result = left * right
+    elif operator == "/":
+        if right == 0:
+            return "Cannot divide by zero"
+        result = left / right
+    elif operator == "%":
+        if right == 0:
+            return "Cannot divide by zero"
+        result = left % right
+    elif operator == "**":
+        result = left ** right
+    else:
+        return "Invalid operator"
+
+    return round(result, 2)
