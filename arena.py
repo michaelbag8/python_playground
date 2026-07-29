@@ -114,3 +114,12 @@ def password_strength(password):
         return "Strong"
     else:
         return "Medium"
+
+def vote_eligibility(age, country):
+    age = int(age)
+    country = country.strip().lower()
+
+    if age >= 18 and country == "nigeria":
+        return "Eligible"
+    else:
+        return "Not eligible"
