@@ -96,3 +96,21 @@ def score_summary(name, a, b, c):
         f"Average: {average}\n"
         f"Grade: {grade}"
             )
+
+def password_strength(password):
+    if len(password) < 8:
+        return "Weak"
+
+    has_letter = False
+    has_digit = False
+
+    for char in password:
+        if char.isalpha():
+            has_letter = True
+        if char.isdigit():
+            has_digit = True
+
+    if has_letter and has_digit:
+        return "Strong"
+    else:
+        return "Medium"
