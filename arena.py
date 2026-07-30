@@ -252,3 +252,12 @@ def collect_until_stop(items):
         result.append(item)
     return result 
         
+def skip_event(start, end):
+    result = []
+    if start > end:
+        return result
+    for even in range(start, end+1):
+        if even%2==0:
+            continue
+        result.append(even)
+    return result
