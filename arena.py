@@ -203,3 +203,26 @@ def triangle_pattern(n):
     result = "\n".join(lines)
     return result
 
+def primes_up_to(n):
+    primes = []
+
+    for number in range(2, n + 1):
+        is_prime = True
+
+        divisor = 2
+        while divisor * divisor <= number:
+            if number % divisor == 0:
+                is_prime = False
+                break
+
+            divisor += 1
+
+        if is_prime:
+            primes.append(number)
+
+    return primes
+
+
+prime = primes_up_to(34)
+
+print(prime)
