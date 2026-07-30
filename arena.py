@@ -226,3 +226,11 @@ def primes_up_to(n):
 prime = primes_up_to(34)
 
 print(prime)
+
+def count_up(n):
+    nums = []
+    if n < 1:
+        return nums
+    for num in range(1, n+1):
+        nums.append(num)
+    return nums
