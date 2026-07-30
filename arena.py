@@ -190,3 +190,16 @@ def convert_number(value):
     except ValueError:
         return "Invalid number"
 
+def triangle_pattern(n):
+    if n < 1:
+        return ""
+
+    lines = []
+
+    for row in range(1, n + 1):
+        line = "*" * row
+        lines.append(line)
+
+    result = "\n".join(lines)
+    return result
+
