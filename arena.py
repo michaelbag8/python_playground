@@ -234,3 +234,14 @@ def count_up(n):
     for num in range(1, n+1):
         nums.append(num)
     return nums
+
+def sum_multiple(limit, divisor):
+    add = 0
+    if divisor == 0:
+        return "Invalid divisor"
+    for i in range(1,limit+1):
+        if i % divisor == 0:
+            add += i
+    return add
+        
+        
