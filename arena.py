@@ -243,5 +243,12 @@ def sum_multiple(limit, divisor):
         if i % divisor == 0:
             add += i
     return add
-        
+
+def collect_until_stop(items):
+    result = []
+    for item in items:
+        if item.strip().lower()=="stop":
+            break
+        result.append(item)
+    return result 
         
