@@ -171,3 +171,12 @@ result_counts = count_entries("tweets.csv", 10, "lang")
 
 # Print result_counts
 print(result_counts)
+# Create a list of strings: fellowship
+fellowship = ['frodo', 'samwise', 'merry', 'aragorn', 'legolas', 'boromir', 'gimli']
+
+# Create dict comprehension: new_fellowship
+new_fellowship = {value: len(value) for value in fellowship}
+
+# Print the new dictionary
+print(new_fellowship)
+
