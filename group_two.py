@@ -1,5 +1,4 @@
-
-
+# group two task
 def report_to_duty(name):
     if not isinstance(name, str):
         return "Only string is allowed"
