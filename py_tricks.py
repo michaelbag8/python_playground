@@ -17,7 +17,7 @@ for student, record in attendance.items():
         else "Not Eligible"
         )
 
-print(student)
-print(f"Attendance: {percentage:.0f}%")
-print(status)
-print("-" * 20)
+    print(student)
+    print(f"Attendance: {percentage:.0f}%")
+    print(status)
+    print("-" * 20)
