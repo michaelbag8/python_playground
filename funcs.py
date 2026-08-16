@@ -16,3 +16,15 @@ print('5 + 2 = {}'.format(add(5, 2)))
 
 subtract = create_math_function('subtract')
 print('5 - 2 = {}'.format(subtract(5, 2)))
+
+def has_docstring(func):
+  """Check to see if the function 
+  `func` has a docstring.
+
+  Args:
+    func (callable): A function.
+
+  Returns:
+    bool
+  """
+  return func.__doc__ is not None
