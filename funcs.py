@@ -28,3 +28,30 @@ def has_docstring(func):
     bool
   """
   return func.__doc__ is not None
+  # Call has_docstring() on the load_and_plot_data() function
+def has_docstring(func):
+  """Check to see if the function 
+  `func` has a docstring.
+
+  Args:
+    func (callable): A function.
+
+  Returns:
+    bool
+  """
+  return func.__doc__ is not None
+
+ok = has_docstring(load_and_plot_data)
+
+if not ok:
+  print("load_and_plot_data() doesn't have a docstring!")
+else:
+  print("load_and_plot_data() looks ok")
+
+# Call has_docstring() on the log_product() function
+ok = has_docstring(log_product)
+
+if not ok:
+  print("log_product() doesn't have a docstring!")
+else:
+  print("log_product() looks ok")
