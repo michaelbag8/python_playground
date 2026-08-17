@@ -108,3 +108,19 @@ closure_values = [
   my_func.__closure__[i].cell_contents for i in range(2)
 ]
 print(closure_values == [2, 17])
+
+#Decorators
+def print_before_and_after(func):
+  def wrapper(*args):
+    print('Before {}'.format(func.__name__))
+    # Call the function being decorated with *args
+    func(*args)
+    print('After {}'.format(func.__name__))
+  # Return the nested function
+  return wrapper
+
+@print_before_and_after
+def multiply(a, b):
+  print(a * b)
+
+multiply(5, 10)
