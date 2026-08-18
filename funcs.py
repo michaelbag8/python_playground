@@ -1,3 +1,5 @@
+import inspect
+
 def create_math_function(func_name):
   if func_name == 'add':
     def add(a, b):
@@ -195,8 +197,6 @@ print('Undecorated time: {:.5f}s'.format(undecorated_time))
 
 
 #docstring
-import inspect
-
 def build_tooltip(function):
   """Create a tooltip for any function that shows the
   function's docstring.
