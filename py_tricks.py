@@ -6,18 +6,22 @@ attendance = {
 }
 
 # refactor into a function
-for student, record in attendance.items():
-    present = record.count("P")
-    percentage = present / len(record) * 100
-
-
-    status = (
+def student_record(attendance):
+    for student, record in attendance.items():
+        present = record.count("P")
+        percentage = present / len(record) * 100
+    
+        status = (
         "Eligible"
         if percentage >= 75
         else "Not Eligible"
         )
-
-    print(student)
-    print(f"Attendance: {percentage:.0f}%")
-    print(status)
-    print("-" * 20)
+    return """
+    {student}
+    Attendance: {percentage:.0f}%
+    {status}
+    '*' * 20
+    """
+    
+record= student_record(attendance)
+print(record)
