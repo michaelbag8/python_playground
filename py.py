@@ -51,6 +51,6 @@ students = {
 report = build_report(students)
 print(report)
 
-
+password = password_generator()
 print("\033[32mGenerated Password\033[0m")
 print("\033[33m" + password + "\033[0m")
