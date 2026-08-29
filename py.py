@@ -9,13 +9,6 @@ password = "".join(
 )
 
 
-students = {
-    "Emma": [67,89,90],
-    "James": [100,78,92],
-    "Joel": [54,71,98],
-    "Desire": [53,22,89]
-}
-
 def build_report(students):
     
 report = {}
@@ -45,7 +38,15 @@ report = {}
     )
 return report 
 
+students = {
+    "Emma": [67,89,90],
+    "James": [100,78,92],
+    "Joel": [54,71,98],
+    "Desire": [53,22,89]
+}
 
+report = build_report(students)
+print(report)
 
 
 print("\033[32mGenerated Password\033[0m")
