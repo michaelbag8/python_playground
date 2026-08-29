@@ -1,12 +1,15 @@
 import random
 import string
 
+def password_generator():
+
 characters = string.ascii_letters + string.digits + string.punctuation
 
 length = 16
 password = "".join(
     random.choice(characters) for _ in range(length)
 )
+return password 
 
 
 def build_report(students):
