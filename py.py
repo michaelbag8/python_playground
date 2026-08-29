@@ -15,12 +15,15 @@ students = {
     "Joel": [54,71,98],
     "Desire": [53,22,89]
 }
+
+def build_report(students):
+    
 report = {}
 
-for name, marks in students.items():
+    for name, marks in students.items():
     average = sum(marks) / len(marks)
 
-    report[name] = {
+        report[name] = {
         "average": round(average,2),
         "grade": (
             "A" if average >= 90 else
@@ -30,7 +33,7 @@ for name, marks in students.items():
         )
     }
 
-for name , info in sorted(
+    for name , info in sorted(
     report.items(),
     key=lambda item: item[1]["average"],
     reverse=True
@@ -40,7 +43,7 @@ for name , info in sorted(
         f"{info["average"]:>5} | "
         f"Grade: {info["grade"]}"
     )
-
+return report 
 
 
 
