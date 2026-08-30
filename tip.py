@@ -26,3 +26,7 @@ with open(filename, "w") as file:
 print("Notes saved successfully!")
 print("\nSaved Notes:")
 print("-" * 25)
+
+with open(filename, "r") as file:
+    for number, note in enumerate(file, start=1):
+        print(f"{number}. {note.strip()}")
