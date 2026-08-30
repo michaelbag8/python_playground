@@ -42,6 +42,6 @@ scores = [67,82,71,100]
 report = {}
 
 for name, score in zip(names, scores):
-    report["name"]=score
+    report[name]=score
 
 print(report["Emma"])
