@@ -1,3 +1,4 @@
+#text transformation 
 def transform_text(text):
     result = []
     for index, letter in enumerate(text):
@@ -11,6 +12,8 @@ def transform_text(text):
     print(text)
 
 
+
+#file writing and reading 
 filename = "notes.txt"
 
 notes = [
@@ -30,3 +33,15 @@ print("-" * 25)
 with open(filename, "r") as file:
     for number, note in enumerate(file, start=1):
         print(f"{number}. {note.strip()}")
+
+
+#zip function usage
+names = ["Emma", "Jo", "Baba", "Damilo"]
+scores = [67,82,71,100]
+
+report = {}
+
+for name, score in zip(names, scores):
+    report["name"]=score
+
+print(report["Emma"])
