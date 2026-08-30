@@ -14,14 +14,14 @@ def transform_text(text):
 filename = "notes.txt"
 
 notes = [
-    "Learn Python decorators"
-    "Practice file handling"
+    "Learn Python decorators",
+    "Practice file handling",
     "Build a mini project"
 ]
 
 with open(filename, "w") as file:
     for note in notes:
-        file.write(note + " ")
+        file.write(note + "\n")
 
 print("Notes saved successfully!")
 print("\nSaved Notes:")
