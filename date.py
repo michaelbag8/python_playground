@@ -1,5 +1,5 @@
 # Import date
-from datetime import date
+from datetime import date, datetime
 
 # Create a date object for May 9th, 2007
 start = date(2007, 5, 9)
@@ -51,5 +51,21 @@ print(john.strftime("%Y-%d"))
 
 zoe = date(1992, 8, 26)
 
-# Print the date in the format 'YYYY-DDD'
+# Print the date in the format 'YYYY-DDD' %j days in a year how astronant
 print(zoe.strftime("%Y-%j"))
+
+
+# Create a datetime object
+dt = datetime(2007, 10, 1, 15, 26, 26)
+
+# Print the results in ISO 8601 format
+print(dt.isoformat())
+
+
+dts = datetime(2017, 12, 31, 15, 19, 13)
+
+# Replace the year with 1917
+dts_old = dt.replace(year=1917)
+
+# Print the results in ISO 8601 format
+print(dts_old.isoformat())
