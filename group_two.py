@@ -1,20 +1,32 @@
-# group two task
-def report_to_duty(name):
-    #type check
+# Group two task
+
+
+def validate_name(name):
+    """Validate a candidate name before assigning duty."""
     if not isinstance(name, str):
-        return "Only string is allowed"
+        raise TypeError("Only string is allowed")
 
-    #removing trailing and leading space 
     name = name.strip()
-    #checking for empty value
     if not name:
-        return "Name cannot be empty"
-    #checking for only letters
-    if not name.replace(" ", "").isalpha():
-        return "Only letters are allowed"
-        
-    return f"Recruit {name} reporting for duty"
+        raise ValueError("Name cannot be empty")
 
-print(report_to_duty("    James    "))
-print(report_to_duty(["a","b"]))
-print(report_to_duty(" 65"))
+    if not name.replace(" ", "").isalpha():
+        raise ValueError("Only letters are allowed")
+
+    return name
+
+
+def report_to_duty(name):
+    """Return a duty report message for a valid name."""
+    try:
+        valid_name = validate_name(name)
+    except (TypeError, ValueError) as error:
+        return str(error)
+
+    return f"Recruit {valid_name} reporting for duty"
+
+
+if __name__ == "__main__":
+    print(report_to_duty("    James    "))
+    print(report_to_duty(["a", "b"]))
+    print(report_to_duty(" 65"))
